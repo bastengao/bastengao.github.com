@@ -2,6 +2,8 @@ safe:        false
 auto:        false
 server:      false
 server_port: 4000
+name: BastenGao's Blog
+description: BastenGao's Blog
 url: http://bastengao.com
 
 source:      .
