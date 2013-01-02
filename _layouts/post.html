@@ -21,7 +21,7 @@
         <div class="span12">
             <h2>{{ page.title }}</h2>
 
-            <p>{{ page.date | date:'%Y-%m-%d' }}</p>
+            <p>写于{{ page.date | date:'%Y-%m-%d' }}, 最后修改 {{ page.last_modified | date: '%Y-%m-%d %H:%M' }}</p>
             <ul>
                 {% for tag in page.tags %}
                 <li>{{ tag }}</li>
