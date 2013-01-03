@@ -15,7 +15,7 @@ future:      true
 lsi:         false
 pygments:    false
 markdown:    rdiscount
-permalink:   /:categories/:year/:month/:title.html
+permalink:   /blog/:categories/:year/:month/:title.html
 
 rdiscount:
   extensions: []
