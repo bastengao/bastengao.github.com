@@ -23,7 +23,7 @@ permalink: /blog/
         <h3>标签</h3>
         <ul>
             {% for tag in site.tags %}
-            <li>{{ tag[0] }}</li>
+            <li><a href="/tag/{{ tag[0] }}/">{{ tag[0] }}</a></li>
             {% endfor %}
         </ul>
     </div>
