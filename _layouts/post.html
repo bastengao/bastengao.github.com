@@ -21,7 +21,8 @@
                 <code><a class="muted" href="/tag/{{ tag }}/">{{ tag }}</a></code>
                 {% endfor %}
                 写于{{ page.date | date:'%Y-%m-%d' }}
-                {% if page.last_modified %} , 最后修改 {{ page.last_modified | date: '%Y-%m-%d %H:%M' }} {% endif %}</p>
+                {% if page.last_modified %} , 最后修改 {{ page.last_modified | date: '%Y-%m-%d %H:%M' }} {% endif %}
+            </p>
         </div>
     </div>
     <div class="row" style="margin-top: 20px;">
@@ -30,9 +31,15 @@
         </div>
     </div>
 
-    <div class="row" style="margin-top: 20px;">
+    <div class="row" style="margin-top: 30px;">
         <div class="span12">
             {% include cc-licenses.html %}
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="span12">
+            {% include bshare.html %}
         </div>
     </div>
 
