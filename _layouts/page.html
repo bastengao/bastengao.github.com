@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>{{ page.title }}</title>
+    {% include meta-author-description.html %}
+    {% include common-css.html %}
+</head>
+<body>
+
+<div class="container">
+    {% include head.html %}
+
+    {{ content }}
+</div>
+
+{% include fork-me-on-github.html %}
+
+{% include google-analytics.html %}
+</body>
+</html>
