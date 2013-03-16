@@ -3,7 +3,7 @@ layout: post
 title: 利用 GitHub 托管 Maven 库
 tags: [maven, github]
 last_modified: 2013-03-16 13:08
-published: true 
+published: false 
 ---
 
 Maven 仓库托管方式
