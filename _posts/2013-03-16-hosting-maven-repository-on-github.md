@@ -2,8 +2,8 @@
 layout: post
 title: 利用 GitHub 托管 Maven 库
 tags: [maven, github]
-last_modified: 2013-03-16 13:08
-published: false 
+last_modified: 2013-03-18 22:38
+published: true
 ---
 
 Maven 仓库托管方式
