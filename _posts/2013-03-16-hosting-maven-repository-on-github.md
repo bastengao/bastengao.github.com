@@ -37,26 +37,58 @@ Maven 仓库托管方式
 
 `releases` 目录放稳定版本的构件，`snapshots` 目录放快照版本的构件。
 
-两中方式將构件部署(deploy)到mvn-repository
+两中方式將构件部署(deploy)到 mvn-repository
 
 * xml 中配置 distributionManage
 
-	<distributionManagement>
-	  <repository>
-	    <id>my-maven-repository</id>
-	    <name>Internal Repository</name>
-	    <url>${project.baseDir../mvn-repository/releases}</url>
-	  </repository>
-	</distributionManagement>
+    修改 mvn-example/pom.xml, 添加下面配置
 
+        <distributionManagement>
+          <repository>
+            <id>my-maven-repository</id>
+            <name>Internal Repository</name>
+            <url>${project.basedir}../mvn-repository/releases</url>
+          </repository>
+        </distributionManagement>
 
-    mvn deploy
+    然后执行命令
+
+        cd mvn-example
+        mvn deploy
+
+    或者嫌配置太多，直接输下面命令
 
 * 直接命令参数
 
-	 mvn -DaltDeploymentRepository=snapshot-repo::default::file:../../cemerick-mvn-repo/snapshots clean deploy
+        cd mvn-example
+        mvn -DaltDeploymentRepository=snapshot-repo::default::file:../mvn-repository/releases clean deploy
 
-[示例](https://github.com/bastengao/mvn-repository)
+deploy 完成后, push 到 github
+
+    cd mvn-repository
+    git add releases
+    git commit -m "add mvn-example"
+    git push origin master
+
+然后可以在其他依赖 mvn-example 的项目通过下面配置引用
+
+    <repositories>
+        <repository>
+            <id>your-mvn-repository</id>
+            <url>https://raw.github.com/yourGitHubId/mvn-repository/master/releases</url>
+        </repository>
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>yourGroupId</groupId>
+            <artifactId>mvn-example</artifactId>
+            <version>${version}</version>
+        </dependency>
+        <!-- ... -->
+    </dependencies>
+
+参见[示例](https://github.com/bastengao/mvn-repository)
 
 参考：
 
