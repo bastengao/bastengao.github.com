@@ -3,7 +3,7 @@ layout: index
 ---
 
 <div class="row">
-    <div class="span9">
+    <div class="col-md-9">
         <h3>最新文章 | Latest blog</h3>
         <ul>
             {% for post in site.posts %}
@@ -11,7 +11,7 @@ layout: index
             {% endfor %}
         </ul>
     </div>
-    <div class="span3">
+    <div class="col-md-3">
         {% include projects-on-github.html %}
     </div>
 </div>
