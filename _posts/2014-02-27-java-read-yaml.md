@@ -2,7 +2,6 @@
 layout: post
 title: java 读取 yaml 文件
 tags: [java, yaml, properites]
-published: false
 ---
 
 做 java 项目用的最多的配置文件就是 properites 或者 xml， xml 确实是被用烂了，Struts, Spring, Hibernate(ssh) 无一不用到 xml。相比厚重的 xml， properites 要清爽许多，一般的项目自己需要的配置也足够使用。但 properties 只支持 `key=value` 这种形式的配置，如果再遇到复杂结构的配置，恐怕难以胜任。
