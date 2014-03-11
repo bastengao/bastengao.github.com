@@ -15,6 +15,7 @@ tags: [logstash, log, email]
 其中 **my.conf** 是配置文件。
 
 配置 input ，通过 file 来指定监控我们要监控的日志文件。
+
 ```
 input {
     file {
@@ -24,6 +25,7 @@ input {
 ```
 
 配置 filter，通过 grep 来做过滤，不匹配的日志都会扔掉(当然也可以通过 dropDown => false 来保留)。
+
 ```
 filter {
     grep {

@@ -9,6 +9,7 @@ tags: [java, yaml, properites]
 这时候 [YAML](http://www.yaml.org/) 出场，yaml 不仅可以做到 properites 的小清新，也可以做到 xml 的表达复杂的结构的能以。 
 
 map
+
 ```yaml
 name: bastengao
 money: 500W
@@ -16,6 +17,7 @@ interest: coding
 ```
 
 array/collection
+
 ```yaml
 - 张三
 - 李四
@@ -23,6 +25,7 @@ array/collection
 ```
 
 混合
+
 ```yaml
 - name: bastengao
   money: 500W
@@ -32,6 +35,7 @@ array/collection
   money: 0.01
   interest: eating
 ```
+
 以上只是举几个例子，详细的语法参考，[yaml spec 1.2](http://www.yaml.org/spec/1.2/spec.html)。
 
 用 java 读取 yaml 文件可以使用 [snakeymal](https://code.google.com/p/snakeyaml/)，maven 项目可以直接引依赖。
@@ -49,6 +53,7 @@ array/collection
 ```
 
 snakeyaml 读取 yaml
+
 ```java
 InputStream input = new FileInputStream("config.yml");
 Yaml yaml = new Yaml();

@@ -11,9 +11,9 @@ exclude:     ["CNAME"]
 
 future:      true
 lsi:         false
-pygments:    false
-markdown:    rdiscount
+pygments:    true
+markdown:    redcarpet
 permalink:   /blog/:categories/:year/:month/:title.html
 
-rdiscount:
-  extensions: []
+redcarpet:
+  extensions: ["fenced_code_blocks"]
