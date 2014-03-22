@@ -16,10 +16,10 @@
             <h1>{{ page.title }}</h1>
             <hr style="margin-bottom: 5px;">
 
-            <p class="muted">
-			    <i class="icon-tags"></i>
+            <p class="text-muted">
+			    <i class="glyphicon glyphicon-tags"></i>
                 {% for tag in page.tags %}
-                <code><a class="muted" href="/tag/{{ tag }}/">{{ tag }}</a></code>
+                <code><a class="text-muted" href="/tag/{{ tag }}/">{{ tag }}</a></code>
                 {% endfor %}
                 写于{{ page.date | date:'%Y-%m-%d' }}
                 {% if page.last_modified %} , 最后修改 {{ page.last_modified | date: '%Y-%m-%d %H:%M' }} {% endif %}
@@ -41,6 +41,21 @@
     <div class="row">
         <div class="col-md-12">
             {% include bshare.html %}
+        </div>
+    </div>
+
+    <div class="row" style="margin-top: 40px; margin-bottom: 40px; font-size: 1.4em;">
+        <div class="col-md-6">
+            {% if (page.previous) %}
+            上一篇 
+            <a href="{{ page.previous.url }}"><strong>{{ page.previous.title }}</strong></a>
+            {% endif %}
+        </div>
+        <div class="col-md-6">
+            {% if (page.next) %}
+            下一篇 
+            <a href="{{ page.next.url }}"><strong>{{ page.next.title }}</strong></a>
+            {% endif %}
         </div>
     </div>
 
