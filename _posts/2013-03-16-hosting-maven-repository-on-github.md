@@ -63,7 +63,7 @@ Maven 仓库托管方式
         cd mvn-example
         mvn -DaltDeploymentRepository=snapshot-repo::default::file:../mvn-repository/releases clean deploy
 
-deploy 完成后, push 到 github
+如果想加入source与api，可在 clean 命令后跟上 `source:jar javadoc:jar`。 deploy 完成后, push 到 github
 
     cd mvn-repository
     git add releases
