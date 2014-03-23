@@ -24,9 +24,80 @@ setTimeout(function(){
 不像 javascript，java 则需要 `Thread` 来并发执行。通常 web 服务器或者 tcp/udp 服务，如果用同步的 i/o api，都需要使用多线程提高系统的吞吐。
 有时候为了效率会将同步的业务拆成异步的，例如用户注册，同时发送验证邮件，但发送邮件可能会比较耗时，这样用户会有长时间的等待，为了提升用户体验，我们可以将发送邮件放在后台线程中去执行。但是多线程会打乱我们平时认为代码顺序执行的习惯，所以写出来的代码会更难理解和测试。
 
-同样我们有时候却需要将异步转化为同步，或者看起来是同步。
+同样我们有时候却需要将异步转化为同步，或者看起来是同步。例如需要等待另一个异步操作的结果。
 
-* synchronized keyword
-* lock
-* lock until
-* jdeferred - implements by synchronized keyword but easy to use like jquery.deferred
+现在我们步入正题，可以通过以下方式将异步转化为同步。
+
+### synchronized keyword
+```java
+final Object lock = new Object();
+
+Thread asyncTask = new Thread(){
+
+    @Override
+    public void run(){ 
+        // do something 
+        synchronized(lock) {
+            lock.notify();
+        }
+    }
+};
+asyncTask.start();
+
+synchronized(lock) {
+    lock.wait();
+}
+```
+
+### Lock
+
+`Lock` 相比 `synchronized` 关键字性能会略胜一筹。
+
+```java
+final Lock lock = new ReentrenLog();
+final Condition condition = lock.newCondition();
+
+Thread asyncTask = new Thread(){
+
+    @Override
+    public void run(){ 
+        // do something 
+        try {
+            lock.tryLock();
+            condition.signal();
+        } finally {
+            lock.unlock();
+        }
+    }
+};
+
+try {
+    lock.tryLock();
+    condition.await();
+} finally {
+    lock.unlock();
+}
+```
+
+### lock until
+除了 `Lock`, java 还提供了一些锁相关的工具类，例如 `CountDownLatch` 方便我们使用。
+
+```java
+CountDownLatch latch = new CountDownLatch(2);
+
+Thread asyncTask = new Thread(){
+
+    @Override
+    public void run(){ 
+        // do something 
+        latch.countDown();
+    }
+};
+asyncTask.start();
+
+latch.countDown();
+```
+
+
+### jdeferred
+[jdeferred](TODO github) 是一个类似于 [jQuery.Deferred](TODO jquery api)(可参考 [阮一峰的博客](TODO)) 的Java实现。 我简单地看了他的源代码，是基于 `synchronzed` 来实现的，用他主要还是因为他的接口简单(与 jQuery.Deferred 相似)，无他。
