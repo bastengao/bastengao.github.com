@@ -38,7 +38,7 @@ Thread asyncTask = new Thread(){
     public void run(){ 
         // do something 
         synchronized(lock) {
-            lock.notify();
+            lock.notifyAll();
         }
     }
 };
@@ -62,8 +62,8 @@ Thread asyncTask = new Thread(){
     @Override
     public void run(){ 
         // do something 
+        lock.lock();
         try {
-            lock.tryLock();
             condition.signal();
         } finally {
             lock.unlock();
@@ -71,8 +71,8 @@ Thread asyncTask = new Thread(){
     }
 };
 
+lock.lock();
 try {
-    lock.tryLock();
     condition.await();
 } finally {
     lock.unlock();
@@ -100,4 +100,20 @@ latch.countDown();
 
 
 ### jdeferred
-[jdeferred](TODO github) 是一个类似于 [jQuery.Deferred](TODO jquery api)(可参考 [阮一峰的博客](TODO)) 的Java实现。 我简单地看了他的源代码，是基于 `synchronzed` 来实现的，用他主要还是因为他的接口简单(与 jQuery.Deferred 相似)，无他。
+[jdeferred](https://github.com/jdeferred/jdeferred) 是一个类似于 [jQuery.Deferred](http://api.jquery.com/category/deferred-object/)(可参考 [阮一峰的博客](http://www.ruanyifeng.com/blog/2011/08/a_detailed_explanation_of_jquery_deferred_object.html) 的Java实现。 我简单地看了他的源代码，是基于 `synchronzed` 来实现的，用他主要还是因为他的接口简单(与 jQuery.Deferred 相似)，无他。
+
+```java
+final Deferred deferred = new DeferredObject();
+
+Thread asyncTask = new Thread(){
+
+    @Override
+    public void run(){ 
+        // do something 
+        deferred.resolve(null);
+    }
+};
+
+Promise promise = deferred.promise();
+promise.waitSafely();
+```
