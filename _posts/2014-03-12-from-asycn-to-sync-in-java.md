@@ -78,7 +78,7 @@ try {
 }
 ```
 
-### lock until
+### lock util
 除了 `Lock`, java 还提供了一些锁相关的工具类，例如 `CountDownLatch` 方便我们使用。
 
 ```java
