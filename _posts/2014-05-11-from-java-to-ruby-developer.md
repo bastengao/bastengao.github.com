@@ -20,6 +20,8 @@ tags: [工作, 开发语言, 跳槽]
 
 由于部门内一个主要做维护工作的人离职投奔自己的理想，学画画去也。我为了减轻数据库的维护工作，引入了 [flayway](http://flywaydb.org/)，类似于 Rails 的 Migration，唯一不足的就是没有 rollback 功能。
 
+接下来为了更好地做知识管理和分享，我在公司内部搭建了wiki利用 dokuWiki，用他是因为部署简单，不需要数据库。同时方便下载maven依赖，利用nexus在公司内部搭建了maven仓库，不过否来发现[oschina的镜像](http://maven.oschina.net/)，也是不错的选择。
+
 同时为了更方便维护，我在项目发布的时候加入了的版本号，参考[maven webapp 读取代码版本号](/blog/2013/11/maven-webapp-read-scm-version.html)，同时把这个任务通过 maven plugin 交给了 teamcity，测试通过后发布到 ftp，并提供 http 下载打包项目。
 
 后来为了公司产品产品更好地展示和移动应用的下载，我用 GitHub 提供的 Pages 服务搭建了[产品网站](http://products.microwise-system.com/)，同时为了信息更透明和更好地交流，我让大家每开发一个功能都要写相关的博客。
