@@ -8,12 +8,25 @@ source:      .
 destination: ./_site
 plugins:     ./_plugins
 exclude:     ["CNAME"]
+timezone:    China/BeiJing
 
 future:      true
 lsi:         false
-pygments:    true
+highlighter: pygments
 markdown:    redcarpet
 permalink:   /blog/:categories/:year/:month/:title.html
+
+kramdown:
+  input: GFM
+  use_coderay: true
+
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: inline
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
 
 redcarpet:
   extensions: ["fenced_code_blocks"]
