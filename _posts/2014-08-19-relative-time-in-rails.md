@@ -14,6 +14,7 @@ time_ago_in_words
 ```
 
 但如果再 controller 或者 model 代码中直接使用，需要先 require 一下
+
 ```
 require 'action_view'
 
