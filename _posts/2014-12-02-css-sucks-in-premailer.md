@@ -19,7 +19,7 @@ app/
     stylesheets/
       email.css
   views/
-    layout/
+    layouts/
       email.html.erb
 ```
 
