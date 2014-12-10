@@ -1,14 +1,16 @@
-safe:        false
+safe: false
 port: 4000
-name: BastenGao's Blog
-description: BastenGao's Blog
+name: Basten Gao's Blog
+author: bastengao
+description: Basten Gao's Blog
 url: http://bastengao.com
 
 source:      .
 destination: ./_site
 plugins:     ./_plugins
-exclude:     ["CNAME"]
+exclude:     ["CNAME", "README.md"]
 timezone:    China/BeiJing
+sitemap: true
 
 future:      true
 lsi:         false
@@ -30,3 +32,6 @@ kramdown:
 
 redcarpet:
   extensions: ["fenced_code_blocks"]
+
+gems:
+  - jekyll-sitemap
