@@ -1,7 +1,7 @@
 window.addEventListener('load', function (e) {
 
 // Now set up your game (most games will load a separate .js file)
-  var Q = Quintus({imagePath: "http://bastengao/assets/soldier/"})  // Create a new engine instance
+  var Q = Quintus({imagePath: "http://bastengao.com/assets/soldier/"})  // Create a new engine instance
       .include("Sprites, Scenes, Input, 2D, Touch, UI") // Load any needed modules
       .setup({width: 900, height: 600})                           // Add a canvas element onto the page
       .controls()                        // Add in default controls (keyboard, buttons)
