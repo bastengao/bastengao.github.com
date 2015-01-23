@@ -23,10 +23,8 @@ window.addEventListener('load', function (e) {
 
   Q.Sprite.extend("Target", {
     init: function (p) {
-      this._super({
+      this._super(p, {
         asset: 'target.png',
-        x: 200,
-        y: 200,
         w: 128,
         h: 128
       });
@@ -66,7 +64,6 @@ window.addEventListener('load', function (e) {
   var aim = new Q.Cross();
 
   // var target = new Q.Sprite({asset: 'target.png', x: 200, y: 200, w: 128, h: 128});
-  var target = new Q.Target();
 
   var shoot_man = new Q.Sprite({asset: 'shoot_man_burned.png', x: 800, y: 530, w: 298, h: 203, angle: 10, scale: .8});
 
@@ -98,8 +95,9 @@ window.addEventListener('load', function (e) {
     container.fit(10, 50);
 
     stage.insert(aim);
-    stage.insert(target);
-    stage.insert(new Q.Target({x: 300, y: 300}));
+    stage.insert(new Q.Target({x: 250, y: 200}));
+    stage.insert(new Q.Target({x: 450, y: 200}));
+    stage.insert(new Q.Target({x: 650, y: 200}));
     stage.insert(shoot_man);
   });
 
