@@ -1,0 +1,44 @@
+<html>
+<head>
+  <!-- Pull the engine from the Quintus CDN or load it locally -->
+  <!-- (use quintus-all.min.js for production) -->
+  <script src='http://cdn.html5quintus.com/v0.2.0/quintus-all.js'></script>
+</head>
+<body>
+<div style="width: 900px; margin: 10px auto;">
+  <h2>神枪手</h2>
+  鼠标移动瞄准，点击射击
+</div>
+<script src="/assets/soldier/soldier.js"></script>
+<!--
+<script>
+  var Q = window.Q = Quintus().include("Sprites").setup({width: 400, height: 400});
+  Q.MovingSprite.extend("Ball", {
+    draw: function (ctx) {
+      ctx.fillStyle = "black";
+      ctx.beginPath();
+      ctx.arc(-this.p.cx,
+          -this.p.cy,
+          this.p.w / 2, 0, Math.PI * 2);
+      ctx.fill();
+
+    }
+  });
+
+  var ball = window.ball = new Q.Ball({
+    w: 20, h: 20,
+    x: 30, y: 300,
+    vx: 50, vy: -200,
+    ax: 0, ay: 100
+  });
+
+  Q.gameLoop(function (dt) {
+    Q.clear();
+    ball.update(dt);
+    ball.render(Q.ctx);
+  });
+
+</script>
+-->
+</body>
+</html>
