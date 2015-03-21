@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 使用 grape-entity 转换 Hash 到另一种 Hash
+title: 使用 grape-entity 转换数据结构
 tags: [ruby, grape-entity]
 ---
 
