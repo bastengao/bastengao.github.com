@@ -83,6 +83,7 @@ openssl req -new -newkey rsa:1024 -days 365 -nodes -x509 -keyout squid3.pem -out
 调整配置 `/etc/squid3.conf`, 如果你还不知道需要修改什么可以看我的下一篇主要讲配置的博客。
 
 默认 http_port 3128 已经可以代理 https 的网站, 如果你需要对https的网站进行一些缓存处理, 比如对图片进行缓存就需要下面三行配置
+
 ```
 http_port 3138 ssl-bump cert=/usr/share/ssl-cert/squid3.pem key=/usr/share/ssl-cert/squid3.pem
 always_direct allow all
