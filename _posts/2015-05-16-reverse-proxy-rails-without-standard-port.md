@@ -50,5 +50,5 @@ server {
 ```
 
 当然也能通过在 environment 中配置 `config.action_controller.default_url_options = { port: 81 }`
-解决部分问题，url hepler 只能使用 xxx_url，xxx_path 依然是错误的端口。一些 gem 比如 devise，
+解决部分问题，url hepler 只能使用 xxx\_url，xxx\_path 依然是错误的端口。一些 gem 比如 devise，
 在重定向中大量使用 xxx_path，也就不能正常工作了。
