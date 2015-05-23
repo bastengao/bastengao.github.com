@@ -4,12 +4,14 @@ layout: index
 
 <div class="row">
     <div class="col-md-9">
-        <h3>最新博客</h3>
+        <h2 style="font-size: 24px;">最新博客</h2>
         <ul class="list-unstyled posts">
             {% for post in site.posts %}
             <li>
-                <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span> 
-                <a class="post-title" href="{{ post.url }}" title="{{ post.excerpt | strip_html | truncate: 50 }}">{{ post.title }}</a>
+                <span class="text-muted">{{ post.date | date:'%Y-%m-%d' }}</span>
+                <h3 class="post-title" style="display: inline-block; margin-top: 0; margin-bottom: 0; line-height: 24px;">
+                  <a href="{{ post.url }}" title="{{ post.excerpt | strip_html | truncate: 50 }}">{{ post.title }}</a>
+                </h3>
             </li>
             {% endfor %}
         </ul>
