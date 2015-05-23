@@ -2,7 +2,8 @@ safe: false
 port: 4000
 name: Basten Gao's Blog
 author: bastengao
-description: Basten Gao's Blog
+description: bastengao 的博客，主要专注于技术开发、Java、Ruby 等。
+keywords: bastengao,博客,个人博客,技术博客
 url: http://bastengao.com
 
 source:      .
