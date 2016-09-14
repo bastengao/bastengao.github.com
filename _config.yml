@@ -18,7 +18,6 @@ sitemap: true
 future:      true
 lsi:         false
 highlighter: rouge
-markdown:    redcarpet
 permalink:   /blog/:categories/:year/:month/:title.html
 
 kramdown:
@@ -32,9 +31,6 @@ kramdown:
     coderay_tab_width: 4
     coderay_bold_every: 10
     coderay_css: style
-
-redcarpet:
-  extensions: ["fenced_code_blocks"]
 
 gems:
   - jekyll-sitemap
