@@ -17,7 +17,7 @@ sitemap: true
 
 future:      true
 lsi:         false
-highlighter: pygments
+highlighter: rouge
 markdown:    redcarpet
 permalink:   /blog/:categories/:year/:month/:title.html
 
