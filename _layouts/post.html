@@ -52,13 +52,13 @@
 
     <div class="row" style="margin-top: 40px; margin-bottom: 40px; font-size: 1.4em;">
         <div class="col-md-6">
-            {% if (page.previous) %}
+            {% if page.previous %}
             上一篇
             <a href="{{ page.previous.url }}"><strong>{{ page.previous.title }}</strong></a>
             {% endif %}
         </div>
         <div class="col-md-6">
-            {% if (page.next) %}
+            {% if page.next %}
             下一篇
             <a href="{{ page.next.url }}"><strong>{{ page.next.title }}</strong></a>
             {% endif %}
