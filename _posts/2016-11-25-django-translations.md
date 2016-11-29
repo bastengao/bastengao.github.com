@@ -9,6 +9,7 @@ tags: [django,translation,i18n]
 ## 修改项目默认语言
 
 先直接上手，修改项目默认语言 `settings.py` 找到 `LANGUAGE_CODE` 改为 `zh-cn`。
+
 ```python
 # 默认是 LANGUAGE_CODE = 'en-us'
 LANGUAGE_CODE = 'zh-cn'
@@ -39,9 +40,11 @@ message = _('hello')
 注意每次 django.po 文件改动后，需要执行 `django-admin compilemessages` 编译 po 生成 django.mo 文件。
 
 如果 `django-admin compilemessages` 出错下面错误。
+
 > CommandError: Can't find msgfmt. Make sure you have GNU gettext tools 0.15 or newer installed.
 
 苹果系统(10.12.1)的解决办法，其他系统自行搜索。
+
 ```
 brew install gettext
 brew link gettext --force
@@ -50,6 +53,7 @@ brew link gettext --force
 ## 解决请求访问问题
 
 访问 django 是页面可能出现下面异常。
+
 > 'ascii' codec can't decode byte xxx
 
 如果遇到这个问题需要在 django.po 文件加入下面内容, [问题参考](http://stackoverflow.com/questions/19294898/django-translation-cant-decode)。
