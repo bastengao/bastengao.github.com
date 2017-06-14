@@ -1,6 +1,6 @@
 ---
 layout: post
-title: blacksand —— 一个基于 Rails Engine 的 CMS gem
+title: blacksand 一个基于 Rails Engine 的 CMS gem
 tags: [rails,cms]
 ---
 
