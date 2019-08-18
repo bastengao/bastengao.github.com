@@ -5,7 +5,7 @@ sub_title: " - Web, Rails, Ruby, Java"
 author: bastengao
 description: bastengao 的博客，主要专注于技术开发、Web、Ruby、Rails、Java 等。
 keywords: bastengao,博客,个人博客,技术博客
-url: http://bastengao.com
+url: https://bastengao.com
 # url: http://localhost:4000
 
 exclude:     ["CNAME", "README.md"]
