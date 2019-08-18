@@ -4,7 +4,7 @@ title: React Native 中使用 WebView 加载本地 html
 tags: [react-native,webview]
 ---
 
-ReactNative 中的 [WebView](https://facebook.github.io/react-native/docs/webview.html) 可以加载一个外部网页，例如下面官网的例子 
+ReactNative 中的 [WebView](https://facebook.github.io/react-native/docs/webview.html) 可以加载一个外部网页，例如下面官网的例子
 
 ```js
 import React, { Component } from 'react';
@@ -12,10 +12,12 @@ import { WebView } from 'react-native';
 
 class MyWeb extends Component {
   render() {
+    let source = { uri: 'https://github.com/facebook/react-native' }
+    let style = { marginTop: 20 }
     return (
       <WebView
-        source={{uri: 'https://github.com/facebook/react-native'}}
-        style={{marginTop: 20}}
+        source={source}
+        style={style}
       />
     );
   }
