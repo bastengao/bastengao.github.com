@@ -8,7 +8,7 @@ tags: [graphql,ruby,practices]
 
 认证 header 我们是使用 JWT, 用起来非常方便，但是如果要做登出业务需要后端对 JWT 进行存储来进行二次验证。授权最早是使用 graphql-guard, 后面 1.8+ 版本加了授权支持也没有使用，不知道实际使用的效果如何。
 
-如果可以项目一开始还是建议使用 Relay 实践，Object Idenfication 和 node 接口还是比较省事。基于游标的分页如果满足项目需求用起来也不错，如果是基于页码的分页我们进行了一些封装，后面我会把这部分代码开源出来。
+如果可以项目一开始还是建议使用 Relay 实践，Object Idenfication 和 node 接口还是比较省事。基于游标的分页如果满足项目需求用起来也不错，如果是基于页码的分页我们进行了一些自己的封装，现在独立一个 gem 在这里 [graphql-paging](https://github.com/bastengao/graphql-paging)。
 
 Subscription 推送也是一个比较使用的特性，可以基于 ActionCable 实现，不过客户端集成那里 ActionCable 的 js adapter 有点小问题，不知道现在还会不会有坑。
 
