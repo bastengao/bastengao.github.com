@@ -15,4 +15,6 @@ Subscription 推送也是一个比较使用的特性，可以基于 ActionCable 
 总而言之如果是稍微大一点的 API 项目我觉得 GraphQL 还是有明显的优势，同时如果项目团队人员比较多的情况下也可以较少关于 API 文档的沟通成本。
 
 * [PPT下载](/downloads/graphql-introduction-and-practices.pdf)
-* 视频等出来后会在这里更新
+* 视频在下面
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/UquN88bxgqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
