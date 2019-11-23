@@ -8,7 +8,7 @@ keywords: bastengao,博客,个人博客,技术博客
 url: https://bastengao.com
 # url: http://localhost:4000
 
-exclude:     ["CNAME", "README.md"]
+exclude:     ["CNAME", "README.md", "tag_generator.py"]
 timezone:    China/BeiJing
 sitemap: true
 

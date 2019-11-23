@@ -14,7 +14,7 @@ layout: page
             <li style="display: inline-block;"><code><a class="text-muted" href="/tag/{{ tag }}">{{ tag }}</a></code></li>
             {% endfor %}
         </ul>
-        <p>{{post.content | truncatewords: 20}}
+        <p>{{ post.excerpt | strip_html | truncate: 140 }}
     </li>
     {% endif %}
     {% endfor %}
