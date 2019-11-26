@@ -16,7 +16,7 @@ published: false
 rails generate uploader Avatar
 ```
 
-```
+```ruby
 # app/uploaders/avatar_uploader.rb
 class AvatarUploader < CarrierWave::Uploader::Base
   storage :file
@@ -32,7 +32,7 @@ end
 
 接下来可以对头像进行下处理，比如裁剪成方形。
 
-```
+```ruby
 # app/uploaders/avatar_uploader.rb
 class AvatarUploader < CarrierWave::Uploader::Base
   storage :file
@@ -42,6 +42,7 @@ class AvatarUploader < CarrierWave::Uploader::Base
   end
 end
 
+```erb
 # app/users/show.html.erb
 <%= image_tag @user.avatar.thumb %>
 ```

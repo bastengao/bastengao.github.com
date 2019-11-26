@@ -8,7 +8,7 @@ tags: [rails, relative-url]
 如果一个 server 上部署多个 Rails app 可以通过 nginx 的 `server_name` 来区分,
 例如下面nginx配置。
 
-```
+```nginx
 server {
   listen: 80;
   server_name app1.example.com;
@@ -35,6 +35,7 @@ server {
 ### step 1
 
 app2 添加配置, application.rb 还是 enironments/\*.rb 自己视情况而定。
+
 ```ruby
 config.relative_url_root = '/app2'
 ```
@@ -42,6 +43,7 @@ config.relative_url_root = '/app2'
 ### step 2
 
 修改 config.ru
+
 ```ruby
 map App2::Application.config.relative_url_root || "/" do
   run Rails.application
@@ -107,7 +109,6 @@ server {
 最后还有个问题是 nginx 的 root 只能指定一个，没办法同时指定 app1 和 app2，所以访问 app2 的 assets
 的时候，得靠 app2 Rails自己服务。所以需要给 app2 添加环境变量 `ENV[RAILS_SERVE_STATIC_FILES] = true`
 或者配置 `config.serve_static_files = true`.
-
 
 参考资料：
 * http://guides.rubyonrails.org/configuring.html#deploy-to-a-subdirectory-relative-url-root

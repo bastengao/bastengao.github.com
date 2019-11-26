@@ -10,7 +10,6 @@ tags: [maile, mailer, style, premailer]
 
 我通过 premailer-rails 间接使用的 premailer 的版本是 1.8.2，希望你看到此篇博客的时候这个问题已经解决，问题跟踪参见 [issue](https://github.com/premailer/premailer/issues/228)。
 
-
 下面说我遇到的坑，我有这样的文件，一个样式和一个模板。
 
 ```

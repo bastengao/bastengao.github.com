@@ -24,7 +24,6 @@ published: true
 
    大家线下的交流遇到一些牛人，可以学习到许多东西，同时也感觉到自己的不足，更多是对自己的激励吧。
 
-
 调侃：大家自我介绍后，才发现有些人有很多传奇的经历。
 
 [@iamroody](http://weibo.com/1710369261/zCEDnrqNS):
@@ -34,4 +33,3 @@ published: true
 > 你忘了还有河边捡到Basic基础秘籍的！
 
 [活动照片](http://weibo.com/1801648450/zCCwZFuQy)点此处。
-

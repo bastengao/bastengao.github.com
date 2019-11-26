@@ -54,7 +54,7 @@ sigar-x86-winnt.dll
 最终我想到个办法是:
 
 1. 将 sigar 的本地库文件放在 `src/main/resources/sigar` 目录下，还是的 classpath 下
-2. 通过 java api 读取 `sigar` 路径，并将路径追加到 `java.library.path`中。 
+2. 通过 java api 读取 `sigar` 路径，并将路径追加到 `java.library.path`中。
 
 代码如下，详见[gists](https://gist.github.com/bastengao/7853455#file-sigarutil-java)。
 

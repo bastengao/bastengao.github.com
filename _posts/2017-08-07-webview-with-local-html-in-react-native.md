@@ -23,6 +23,7 @@ class MyWeb extends Component {
   }
 }
 ```
+
 有时候可以使用 WebView 弥补一些 ReactNative 内置的组件实现不了的东西，我们可以借助 HTML 来完成，毕竟 HTML 有丰富的工具可以用。例如要想在 ReactNative 里展示图表，原生自带的组件则没办法实现，其他的图表组件都是基于 react-native-svg 实现的，展示效果目前还不足人意。这个时候 HTML 则有一大堆图表工具可以使用，echarts, highcharts 等等等。
 
 接下来我们可以写一个网页，然后使用 uri 外部引用进来。但是把网页放在服务器上，然后 App 引用还是挺啰嗦的。能不能把网页放在应用内部，本地引用呢？当然可以，这个才是这篇博客的主题。

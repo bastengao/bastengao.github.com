@@ -26,9 +26,7 @@ always_direct allow all
 ssl_bump server-first all
 ```
 
-
 ### 匿名代理
-
 
 默认配置会泄露内网ip，如果你不想让人知道你使用代理，可以添加下面配置。
 

@@ -9,7 +9,7 @@ tags: [squid3, ssl, ubuntu]
 squid 3.1.19 只支持到 (TSL 1.0)[http://www.squid-cache.org/Versions/v3/3.1/cfgman/sslproxy_options.html],
 所以只能安装更高版本的 squid.
 
-```
+```shell
 # 安装 squid 的依赖
 apt-get update
 apt-get install devscripts build-essential libssl-dev gawk m4 gcc-multilib

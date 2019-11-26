@@ -16,14 +16,14 @@ nginx 使用 http， 端口配置的是 81, 然后导致项目中 redirect_to �
 
 接着查看 nginx 配置中 `Host` 和 `X-Forwarded-Host` 并没有配置端口，加上端口配置后，重定向问题解决了。
 
-```
+```nginx
 proxy_set_header Host $host
 proxy_set_header X-Forwarded-Host $host
 ```
 
 这里给出 nginx 完整配置，方便大家参看。
 
-```
+```nginx
 server {
   listen 81;
   server_name  127.0.0.1;

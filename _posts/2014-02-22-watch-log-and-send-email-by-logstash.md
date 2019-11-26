@@ -19,7 +19,7 @@ tags: [logstash, log, email]
 ```
 input {
     file {
-		path => ["/path/to/log"]
+        path => ["/path/to/log"]
     }
 }
 ```
@@ -38,8 +38,8 @@ filter {
 
 ```
 output {
-	stdout {}
-	elasticsearch { embedded => true }
+    stdout {}
+    elasticsearch { embedded => true }
 }
 ```
 
@@ -50,7 +50,7 @@ exec -> curl -> mailgun http api，就是通过 exec 执行系统命令 curl，�
 output {
     # 之前的配置省略
     exec {
-        # curl 参数参见 mailgun api 
+        # curl 参数参见 mailgun api
         command => "curl xxx"
     }
 }
