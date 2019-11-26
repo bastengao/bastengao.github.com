@@ -19,7 +19,7 @@ devise 默认的认证请求是 `POST /users/sign_in` 但他并不支持 format 
 ```ruby
 class Users::SessionsController < Devise::SessionsController
   # 默认只支持 html, 添加 json
-	respond_to :html, :json
+  respond_to :html, :json
 
   # 如果 ApplicationController 设置了 'protect_from_forgery with: :exception',
   # 这里需要忽略检查
