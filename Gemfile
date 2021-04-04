@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-gem 'github-pages', '~> 207'
+gem 'github-pages', '~> 214'
 gem "webrick"
 
 group :jekyll_plugins do
