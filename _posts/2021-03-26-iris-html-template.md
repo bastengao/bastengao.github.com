@@ -1,7 +1,7 @@
 ---
 layout: post
-title: iris HTML 模板
-tags: [go,web,web,template,iris]
+title: iris view 作为更好的 Go HTML 模板使用
+tags: [go,web,template,iris]
 published: true
 ---
 
