@@ -2,6 +2,7 @@
 layout: post
 title: iris 使用小技巧
 tags: [go,iris,mvc]
+last_modified: 2022-05-18 22:02
 published: true
 ---
 
@@ -24,6 +25,20 @@ var fs embed.FS
 
 // iris.HTML 支持目录或者 http.FileSystem
 tmpl = iris.HTML(http.FS(fs), ".html")
+```
+
+## MVC GetByXxx
+
+官方 [MVC wiki](https://github.com/kataras/iris/wiki/MVC) 里列举了 GetBy 和 GetXxxBy, 但是少说明了一个 GetByXxx, 效果如下。
+
+```go
+mvc.New(app.Party("/users")).Handle(new(UsersController))
+
+// Method: GET
+// Resource: /users/{userID:int64}/addresses
+func (* UsersController) GetByAddresses(userID int64) string {
+    return "addresses"
+}
 ```
 
 ## MVC 路由命名
