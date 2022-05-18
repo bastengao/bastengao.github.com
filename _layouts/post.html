@@ -21,8 +21,7 @@
                 {% for tag in page.tags %}
                 <code><a class="text-muted" href="/tag/{{ tag }}/">{{ tag }}</a></code>
                 {% endfor %}
-                写于{{ page.date | date:'%Y-%m-%d' }}
-                {% if page.last_modified %} , 最后修改 {{ page.last_modified | date: '%Y-%m-%d %H:%M' }} {% endif %}
+                写于{{ page.date | date:'%Y-%m-%d' }}{% if page.last_modified %}, 最后修改 {{ page.last_modified | date: '%Y-%m-%d %H:%M' }} {% endif %}
             </p>
         </div>
     </div>
