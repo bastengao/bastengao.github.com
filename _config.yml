@@ -9,7 +9,7 @@ url: https://bastengao.com
 # url: http://localhost:4000
 
 exclude:     ["CNAME", "README.md", "tag_generator.py"]
-timezone:    China/BeiJing
+timezone:    Asia/Shanghai
 sitemap: true
 
 future:      true
