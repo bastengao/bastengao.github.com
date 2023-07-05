@@ -6,7 +6,7 @@ tags: [go,smtp,ssl]
 
 Go 标准库已经带了 net/stmp 的库，可以通过 `smtp.SendMail(addr, auth, from, to, msg)` 直接发送邮件。看到 SendMail https://godoc.org/net/smtp#SendMail 方法的描述说如果可以使用 TLS 认证。
 
-```
+```plaintext
 SendMail connects to the server at addr, switches to TLS if possible, authenticates with the optional mechanism a if possible, and then sends an email from address from, to addresses to, with message msg. The addr must include a port, as in "mail.example.com:smtp".
 ```
 
